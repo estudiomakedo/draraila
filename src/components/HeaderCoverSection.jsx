@@ -5,9 +5,7 @@ import GoogleFontLoader from '../components/modified/GoogleFontLoader';
 
 import cover from '../../static/raila/main11tratada.png'
 import texture from "../../static/siteimg/texture.png";
-import grisi from "../../static/aldo/grisi.png";
 import RoundButton from './RoundButton';
-import logo from '../../static/logo/header-logo.png';
 import { Link } from 'gatsby';
 import Theme from '../../config/theme';
 
@@ -155,7 +153,7 @@ text-shadow: 0px 3px 6px #00000050;
 width: 100%;
 margin-bottom: 0;
 opacity: 1;
-font-family: Lato;
+font-family: Poppins;
 line-height: 1.2;
 
 @media screen and (min-width: ${Theme.breakpoints.s}) {
@@ -214,7 +212,8 @@ const NoBgButton = styled.div`
   padding: 20px 15px;
   box-shadow: 0px 3px 6px #00000029;
   max-width: 240px;
-  border: 2px solid #333;
+  border: 2px solid white;
+  background-color: red;
 
   @media screen and (max-width:  ${Theme.breakpoints.s}){
     margin: 0.5rem auto;
@@ -222,7 +221,7 @@ const NoBgButton = styled.div`
 
   & p {
     font-size: 20px;
-    color: #333;
+    color: white;
     text-align: center;
   }
 `;
@@ -247,7 +246,7 @@ const HeaderCoverSection = ({ children, title, date }) => {
       </DisplayNone>
       <Link to="/#knowbetter">
         <NoBgButton>
-          <p>Agendar Consulta</p>
+          <p>Site em Construção</p>
         </NoBgButton>
       </Link>
 

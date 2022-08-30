@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import GoogleFontLoader from '../components/modified/GoogleFontLoader';
 
 import blackbg from '../../static/img/blackbg.jpg';
-import aldo from '../../static/aldo/aldo.png';
 import Theme from '../../config/theme';
 
 import RoundButton from './RoundButton';
@@ -112,7 +111,7 @@ const MainProductSection = ({ children, title, date }) => {
 
       </div> 
       
-      <img src={aldo} />
+      <img />
     
     </Wrapper>
   </Box>

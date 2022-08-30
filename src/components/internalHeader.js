@@ -1,7 +1,6 @@
 import * as React from "react";
 import styled from '@emotion/styled';
 import blackbg from '../../static/img/blackbg.jpg';
-import logo from '../../static/logo/header-logo.png';
 import { Link } from "gatsby";
 
 const InternalHeader = class extends React.Component {
@@ -14,7 +13,7 @@ const InternalHeader = class extends React.Component {
     return (
       <Headers> 
         <Link to={'/'}>
-          <img style={{maxWidth: '250px'}} src={logo} />  
+          <img style={{maxWidth: '250px'}} />  
         </Link>
       </Headers>
 
