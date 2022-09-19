@@ -10,6 +10,7 @@ import RoundButton from './RoundButton';
 import logo from '../../static/logo/header-logo.png';
 import { Link } from 'gatsby';
 import Theme from '../../config/theme';
+import NoBgButton from '../components/shared/NoBgButton';
 
 const Wrapper = styled.header`
   height: 100vh;
@@ -155,7 +156,7 @@ text-shadow: 0px 3px 6px #00000050;
 width: 100%;
 margin-bottom: 0;
 opacity: 1;
-font-family: Lato;
+font-family: Poppins;
 line-height: 1.2;
 
 @media screen and (min-width: ${Theme.breakpoints.s}) {
@@ -208,23 +209,6 @@ const DisplayNone = styled.div`
 @media screen and (max-width:  ${Theme.breakpoints.s}){
   display: none;
 }
-`;
-
-const NoBgButton = styled.div`
-  padding: 20px 15px;
-  box-shadow: 0px 3px 6px #00000029;
-  max-width: 240px;
-  border: 2px solid #333;
-
-  @media screen and (max-width:  ${Theme.breakpoints.s}){
-    margin: 0.5rem auto;
-  }
-
-  & p {
-    font-size: 20px;
-    color: #333;
-    text-align: center;
-  }
 `;
 
 const HeaderCoverSection = ({ children, title, date }) => {

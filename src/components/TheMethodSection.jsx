@@ -2,6 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import GoogleFontLoader from '../components/modified/GoogleFontLoader';
+import NoBgButton from '../components/shared/NoBgButton';
+import { Link } from 'gatsby';
 
 import Theme from '../../config/theme';
 
@@ -17,7 +19,7 @@ const Wrapper = styled.section`
   grid-template-columns: 4fr 3fr;
   grid-template-rows: auto 3fr;
   grid-gap: 20px;
-  padding: 2rem 1rem 3rem;
+  padding: 2rem 2rem 3rem;
 
   @media screen and (min-width: ${Theme.breakpoints.m}) {
     padding: 2rem 4rem 3rem;
@@ -31,13 +33,25 @@ const Wrapper = styled.section`
 const Title = styled.h2`
   grid-column: 1/-1;
   font-size: 50px;
+  font-family: Poppins;
+  font-weight: 300;
   color: ${Theme.colors.white.darkGrey};
 `;
 
 const Text = styled.p`
-  font-size: 20px;
+  font-size: 17;
   color: ${Theme.colors.white.dark};
   margin-bottom: 20px;
+`;
+
+const FrameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const LinkStyled = styled(Link)`
+  padding-top: 40px;
 `;
 
 const TheMethodSection = ({ children, title, date }) => {
@@ -68,9 +82,17 @@ const TheMethodSection = ({ children, title, date }) => {
           Nas redes sociais e no seu canal no YouTube, a Dra. Raila está sempre divulgando informações a respeito de tratamentos para a obesidade e/ou sobrepeso, bem como é uma importante voz na divulgação científica médica, realizando comentários sobre artigos e estudos em andamento sobre implantes hormonais, emagrecimento, hipertrofia, performance física, libido, obesidade e qualidade de vida. Atualmente, a Dra. Raila Teixeira cumpre agenda de atendimentos nas cidades de São Paulo (SP), Bauru (SP), Sinop (MT), Piracicaba (SP) e Fortaleza (CE), como também realiza consultas via telemedicina.
         </Text>
       </div> 
+      <FrameContainer>
+        <iframe style={{margin: "0 auto"}} width="100%" height="315" 
+                src="https://www.youtube.com/embed/9d2x_hYSx2c" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <LinkStyled to="/#knowbetter">
+          <NoBgButton color={Theme.colors.primary.base} maxWidth={'340px'}>
+            <p>Siga a Dra Raila no Youtube</p>
+          </NoBgButton>
+        </LinkStyled>
+      </FrameContainer>
 
-      <iframe style={{margin: "0 auto"}
-    } width="100%" height="315" src="https://www.youtube.com/embed/9d2x_hYSx2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </Wrapper>
   </Box>
 )};

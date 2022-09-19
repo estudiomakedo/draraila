@@ -10,6 +10,8 @@ import TheMethodSection from "../components/TheMethodSection";
 import MainProductSection from '../components/MainProductSection';
 import MainCoursesSection from "../components/MainCoursesSection";
 import BlogSection from "../components/BlogSection";
+import ThreatmentsSection from "../components/ThreatmentsSection";
+
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -26,7 +28,7 @@ export const IndexPageTemplate = ({
     <div>
       <HeaderCoverSection/>
       <TheMethodSection />
-      <MainProductSection />
+      <ThreatmentsSection />
       <BlogSection>
         <BlogRoll />
       </BlogSection>
