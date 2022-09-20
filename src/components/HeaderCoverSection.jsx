@@ -5,9 +5,6 @@ import GoogleFontLoader from '../components/modified/GoogleFontLoader';
 
 import cover from '../../static/raila/main11tratada.png'
 import texture from "../../static/siteimg/texture.png";
-import grisi from "../../static/aldo/grisi.png";
-import RoundButton from './RoundButton';
-import logo from '../../static/logo/header-logo.png';
 import { Link } from 'gatsby';
 import Theme from '../../config/theme';
 import NoBgButton from '../components/shared/NoBgButton';

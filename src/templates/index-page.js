@@ -7,8 +7,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import HeaderCoverSection from "../components/HeaderCoverSection";
 import TheMethodSection from "../components/TheMethodSection";
-import MainProductSection from '../components/MainProductSection';
-import MainCoursesSection from "../components/MainCoursesSection";
+import ContactSection from "../components/ContactSection";
 import BlogSection from "../components/BlogSection";
 import ThreatmentsSection from "../components/ThreatmentsSection";
 
@@ -32,7 +31,7 @@ export const IndexPageTemplate = ({
       <BlogSection>
         <BlogRoll />
       </BlogSection>
-      <MainCoursesSection />
+      <ContactSection />
       
 
       {/*

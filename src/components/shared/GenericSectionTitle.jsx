@@ -32,13 +32,13 @@ export default class GenericSectionTitle extends React.Component {
 
 const Container = styled.div`
   margin: 0 0 2rem;
-  color: ${Theme.colors.black.base};
+  color: ${Theme.colors.white.light};
 
 `;
 
 const Text = styled.h3`
   font-family: Poppins;
-  font-size: 34px;
-  font-weight: 400;
+  font-size: 43px;
+  font-weight: 300;
   margin:0;
 `;
