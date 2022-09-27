@@ -1,7 +1,8 @@
 import * as React from "react";
 import styled from '@emotion/styled';
-import blackbg from '../../static/img/blackbg.jpg';
+import texture from "../../static/siteimg/texture.png";
 import { Link } from "gatsby";
+import GenericSectionTitle from "./shared/GenericSectionTitle";
 
 const InternalHeader = class extends React.Component {
 
@@ -10,10 +11,13 @@ const InternalHeader = class extends React.Component {
   }
 
   render() {
+    const { title } = this.props;
     return (
       <Headers> 
         <Link to={'/'}>
-          {/*<img style={{maxWidth: '250px'}} src={} /> */}
+          <HeaderTitle>
+            {title}
+          </HeaderTitle>  
         </Link>
       </Headers>
 
@@ -23,11 +27,19 @@ const InternalHeader = class extends React.Component {
 };
 
 const Headers = styled.header`
-background: url(${blackbg}) no-repeat no-repeat top left;
+background: url(${texture}) no-repeat no-repeat top left;
 height: 200px;
 display: flex;
-justify-content: center;
-align-items: center;
+justify-content: flex-start;
+align-items: end;
 `; 
+
+const HeaderTitle = styled.h1`
+  margin: 0 0 0.5rem 1rem;
+  color: #666;
+  fontWeight: bold;
+  font-size: 42px;
+  font-family: Poppins;
+`;
 
 export default InternalHeader;

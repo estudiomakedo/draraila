@@ -79,7 +79,7 @@ const CRM = styled.span`
 
 const Copyright = styled.h5`
   margin: 0 1rem 0 0;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 300;
   font-family: Poppins;
   color: #707070;

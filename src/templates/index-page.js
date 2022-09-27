@@ -32,8 +32,6 @@ export const IndexPageTemplate = ({
         <BlogRoll />
       </BlogSection>
       <ContactSection />
-      
-
       {/*
             
       <FullWidthImage img={heroImage} title={title} subheading={subheading} />*/}

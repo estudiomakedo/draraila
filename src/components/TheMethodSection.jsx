@@ -84,8 +84,8 @@ const TheMethodSection = ({ children, title, date }) => {
       </div> 
       <FrameContainer>
         <iframe style={{margin: "0 auto"}} width="100%" height="315" 
-                src="https://www.youtube.com/embed/9d2x_hYSx2c" title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                src="https://www.youtube.com/embed/9d2x_hYSx2c" title="YouTube video player" frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         <LinkStyled to="/#knowbetter">
           <NoBgButton color={Theme.colors.primary.base} maxWidth={'340px'}>
             <p>Siga a Dra Raila no Youtube</p>

@@ -75,7 +75,8 @@ const City = styled.h5`
 
 const Group = styled.div` 
   display:flex; 
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 `;
 
 const GroupInfo = styled.p`
@@ -116,8 +117,8 @@ const ContactSection = ({ children, title, date }) => {
       <Row>
         <ContactCard flex={7}>
           <Title>Book de Contatos</Title>
-          {contacts.map(contact => (
-            <ContactInfo>
+          {contacts.map((contact, index) => (
+            <ContactInfo key={index}>
               <City>{contact.city}</City>
               <Group>
                 <GroupInfo>{contact.phone}</GroupInfo>

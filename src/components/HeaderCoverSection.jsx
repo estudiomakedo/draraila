@@ -8,6 +8,7 @@ import texture from "../../static/siteimg/texture.png";
 import { Link } from 'gatsby';
 import Theme from '../../config/theme';
 import NoBgButton from '../components/shared/NoBgButton';
+import {OpenModal} from "./shared/Portal/PortalService";
 
 const Wrapper = styled.header`
   height: 100vh;
@@ -209,6 +210,11 @@ const DisplayNone = styled.div`
 `;
 
 const HeaderCoverSection = ({ children, title, date }) => {
+
+  function openScheduleModal() {
+    OpenModal("schedule");
+  };
+
   return(<Wrapper>
     <GoogleFontLoader
           fonts={[
@@ -226,7 +232,7 @@ const HeaderCoverSection = ({ children, title, date }) => {
           Tenha acesso a tratamentos de primeira linha em Terapia de Reposição Hormonal, Suplementação Injetável e Protocolos Avançados de Emagrecimento
         </Subtitle>
       </DisplayNone>
-      <Link to="/#knowbetter">
+      <Link to="/#" onClick={openScheduleModal()}>
         <NoBgButton>
           <p>Agendar Consulta</p>
         </NoBgButton>

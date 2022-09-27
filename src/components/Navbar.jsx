@@ -5,6 +5,7 @@ import logoNome from "../../static/siteimg/pngnome.png";
 import styled from '@emotion/styled';
 import Theme from '../../config/theme';
 import GoogleFontLoader from './modified/GoogleFontLoader';
+import {OpenModal} from "./shared/Portal/PortalService";
 
 const NavWrapper = styled.div`
   z-index: 5;
@@ -12,7 +13,7 @@ const NavWrapper = styled.div`
   background-color: #f3f3f3;
   border-radius: 0px 0px 20px 0px;
   position: ${props => props.isFixed ? `fixed`:`absolute`};
-  width: 100%;
+  width: 100vw;
   display: flex;
   padding: 8px 0;
   justify-content: space-between;
@@ -50,6 +51,10 @@ const LogoBar = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: ${Theme.breakpoints.m}) {
+    justify-content: space-between;
+  }
 `;
 
 const NavItem = styled(Link)`
@@ -58,7 +63,7 @@ const NavItem = styled(Link)`
   text-align: center;
   font-size: 18px;
   margin: 0 10px;
-
+  
   &:hover {
     color: ${Theme.colors.white.grey};
   }
@@ -75,8 +80,14 @@ const NavItemSpecial = styled(Link)`
   margin: 0 10px;
 
   &:hover {
-    color: ${Theme.colors.white.grey};
+    color: ${Theme.colors.black.light};
   }
+`;
+
+const LinkLogo = styled(Link)`
+  display: flex;
+  align-items: center;
+  color: #666;
 `;
 
 const LogoImg = styled.img`
@@ -106,7 +117,7 @@ const StyledListItem = styled.li`
   padding: 10px 0;
   text-align: center;
   &:hover {
-    background-color: ${Theme.colors.primary.light};
+    background-color: ${Theme.colors.white.light};
   }
 `;
 
@@ -170,6 +181,11 @@ const Navbar = class extends React.Component {
     this.setState({navSMVisible: !this.state.navSMVisible})
   }
 
+  openScheduleModal() {
+    this.setVisible();
+    OpenModal("schedule");
+  }
+
   render(){
     return(
     <NavWrapper isFixed={this.state.isStickyHeader}>
@@ -183,55 +199,57 @@ const Navbar = class extends React.Component {
       />
 
       <LogoBar>
-        <LogoImg src={logo} style={{marginRight: 6, marginLeft: 16}} />
-        <LogoImg src={logoNome} />
-        <CRM>CRM 190912</CRM>
-        <HamburguerMenu style={{alignItems: "center", width: "100%"}} onClick={() => this.setVisible() }>
+        <LinkLogo to="/">
+          <LogoImg src={logo} style={{marginRight: 6, marginLeft: 16}} />
+          <LogoImg src={logoNome} />
+          <CRM>CRM 190912</CRM>
+        </LinkLogo> 
+        <HamburguerMenu style={{alignItems: "center"}} onClick={() => this.setVisible() }>
           <svg style={{width: "15px", marginRight: "15px"}} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" className="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
         </HamburguerMenu>
       </LogoBar>
-
-
+      
       {this.state.navSMVisible?
         <NavSM>
           <StyledList>
             <StyledListItem>
-              <NavItem to="/" onClick={() => this.toggleHamburger()}>
+              <NavItem to="/">
                 Tratamentos
               </NavItem>
             </StyledListItem>
             <StyledListItem>
-              <NavItem to="/" onClick={() => this.toggleHamburger()}>
+              <NavItem to="/blog">
                 Blog
               </NavItem>
             </StyledListItem>
             <StyledListItem>
-              <NavItem to="/" onClick={() => this.toggleHamburger()}>
+              <NavItem to="/">
                 Contato
               </NavItem>
             </StyledListItem>
             <StyledListItem>
-              <NavItem to="/" onClick={() => this.toggleHamburger()}>
+              <NavItem to="#" onClick={() => this.openScheduleModal()}>
                 Agende uma Consulta
               </NavItem>
             </StyledListItem>
           </StyledList>
         </NavSM>
       : null }
+
       <NavBar 
         data-target="navMenu"
         role="menuitem"
         tabIndex={0}>
-        <NavItem to="/" onClick={() => this.toggleHamburger()}>
+        <NavItem to="/">
           Tratamentos
         </NavItem>
-        <NavItem to="/blog" onClick={() => this.toggleHamburger()}>
+        <NavItem to="/blog">
           Blog
         </NavItem>
-        <NavItem to="/#footer" onClick={() => this.toggleHamburger()}>
+        <NavItem to="/#footer">
           Contato
         </NavItem>
-        <NavItemSpecial to="/schedule" onClick={() => this.toggleHamburger()}>
+        <NavItemSpecial to="#" onClick={() => this.openScheduleModal()}>
           Agende uma Consulta
         </NavItemSpecial>
       </NavBar>

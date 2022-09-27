@@ -28,12 +28,18 @@ export default class PortalWrapper extends React.Component {
     }
   }
 
+  checkIfHide(event) {
+    console.log(event)
+    if(event.target.id == 'schedule')
+      this.hide();
+  }
+
     render() {
     const { children, identifier, styles } = this.props
  
       return (
       <Portal>
-        <Container id={identifier}>
+        <Container id={identifier} onClick={(event) => this.checkIfHide(event)}>
           <div style={{display: 'flex'}}>
             <Box style={styles}>
               {children}
@@ -70,11 +76,14 @@ const Container = styled.div`
 
 const Box = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: #f7f7f7;
   padding: 1rem;
   border-radius: 12px;
+  max-height: 500px;
+  @media screen and (max-width: ${Theme.breakpoints.m}) {
+    overflow:scroll;
+  }
 `;
 
 const ImgContainer = styled.div`
@@ -86,4 +95,11 @@ const ImgContainer = styled.div`
     top: -12px;
     right: 21px;
     cursor: pointer;
+
+    @media screen and (max-width: ${Theme.breakpoints.s}) {
+      position: absolute;
+      top: 585px;
+      left: calc(50% - 20px);
+      cursor: pointer;
+    }
 `;

@@ -66,9 +66,10 @@ const Threated1 = styled.img`
   top: -200px;
 
   @media screen and (min-width: ${Theme.breakpoints.m}) and (max-width: ${Theme.breakpoints.l}) {
-    top: -100px;
-    max-width: 500px;
+    top: 0px;
+    max-width: 550px;
     margin-bottom: 50px;
+    left: -90px;
   }
 `; 
 
