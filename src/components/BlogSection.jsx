@@ -8,7 +8,7 @@ import { Link } from 'gatsby'
 import GenericSectionTitle from '../components/shared/GenericSectionTitle';
 
 const Box = styled.div`
-  background-color: ${Theme.colors.primary.lighter};
+  background-color: ${Theme.colors.secondary.light};
   padding: 3rem 4rem;
 `;
 
@@ -23,18 +23,20 @@ const SectionAction = styled(Link)`
   font-size: 18px;
   font-size: 1rem;
   line-height: 1.25;
-  background-color:  ${Theme.colors.white.base};
-  border-radius: 0.25rem;
+  background-color:  ${Theme.colors.secondary.dark};
+  border-radius: 25px;
+  width: 200px;
   text-decoration: none;
   font-weight: 700;
-  color: ${Theme.colors.primary.light};
+  color: ${Theme.colors.white.base};
   text-align: center;
-  box-shadow: inset 0 0 0 2px ${Theme.colors.primary.light};
+  box-shadow: 0px 3px 6px #00000029;
   transition: all 0.15s ease;
 
   &:hover {
-    color: ${Theme.colors.primary.base};
-    box-shadow: inset 0 0 0 2px ${Theme.colors.primary.base};
+    color: ${Theme.colors.secondary.dark};
+    box-shadow: inset 0 0 0 2px ${Theme.colors.white.light};
+    background-color:  ${Theme.colors.white.light};
 
   }
 `;
@@ -56,7 +58,7 @@ const BlogSection = ({ children }) => {
         {children}
         <div className="column is-12 has-text-centered">
           <SectionAction to="/blog">
-            VER TODOS
+            VER TUDO
           </SectionAction>
         </div>
     </Wrapper>

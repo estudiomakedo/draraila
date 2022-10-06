@@ -88,7 +88,7 @@ const InformationContainer = styled.div`
 `;
 
 const City = styled.h3`
-  font-family: Poppings;
+  font-family: Poppins;
   font-weight:500;
   font-size: 30px;
   text-align: center;

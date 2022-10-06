@@ -5,9 +5,10 @@ import GoogleFontLoader from '../components/modified/GoogleFontLoader';
 
 import cover from '../../static/raila/main11tratada.png'
 import texture from "../../static/siteimg/texture.png";
-import RoundButton from './RoundButton';
 import { Link } from 'gatsby';
 import Theme from '../../config/theme';
+import NoBgButton from '../components/shared/NoBgButton';
+import {OpenModal} from "./shared/Portal/PortalService";
 
 const Wrapper = styled.header`
   height: 100vh;
@@ -208,25 +209,12 @@ const DisplayNone = styled.div`
 }
 `;
 
-const NoBgButton = styled.div`
-  padding: 20px 15px;
-  box-shadow: 0px 3px 6px #00000029;
-  max-width: 240px;
-  border: 2px solid white;
-  background-color: red;
-
-  @media screen and (max-width:  ${Theme.breakpoints.s}){
-    margin: 0.5rem auto;
-  }
-
-  & p {
-    font-size: 20px;
-    color: white;
-    text-align: center;
-  }
-`;
-
 const HeaderCoverSection = ({ children, title, date }) => {
+
+  function openScheduleModal() {
+    OpenModal("schedule");
+  };
+
   return(<Wrapper>
     <GoogleFontLoader
           fonts={[
@@ -244,7 +232,7 @@ const HeaderCoverSection = ({ children, title, date }) => {
           Tenha acesso a tratamentos de primeira linha em Terapia de Reposição Hormonal, Suplementação Injetável e Protocolos Avançados de Emagrecimento
         </Subtitle>
       </DisplayNone>
-      <Link to="/#knowbetter">
+      <Link to="/#" onClick={openScheduleModal()}>
         <NoBgButton>
           <p>Site em Construção</p>
         </NoBgButton>

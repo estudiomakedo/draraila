@@ -14,6 +14,7 @@ const ArticleLimitedExcerpt = styled.span`
   -webkit-box-orient: vertical;
   white-space: normal;
   padding: 0 0.7rem;
+  font-family: Poppins;
 
 `; 
 
@@ -34,7 +35,7 @@ const ArticleLimitedTitle = styled(Link)`
 
   font-size: 24px;
   font-family: Poppins;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none !important;
   color: ${Theme.colors.black.base};
 `; 
@@ -60,11 +61,12 @@ const ArticleActionButton = styled(Link)`
   font-family: Lato;
   font-weight: 600;
   text-decoration: none !important;
-  color: ${Theme.colors.primary.base};
-  padding: 0 0.7rem 0;
+  color: ${Theme.colors.secondary.dark};
+  padding: 0 1rem 0;
+  font-family: Poppins;
 
   &:hover {
-    color: ${Theme.colors.primary.light};
+    color: ${Theme.colors.secondary.base};
   }
 `; 
 

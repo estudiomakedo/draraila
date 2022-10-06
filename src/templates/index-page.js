@@ -7,9 +7,10 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import HeaderCoverSection from "../components/HeaderCoverSection";
 import TheMethodSection from "../components/TheMethodSection";
-import MainProductSection from '../components/MainProductSection';
-import MainCoursesSection from "../components/MainCoursesSection";
+import ContactSection from "../components/ContactSection";
 import BlogSection from "../components/BlogSection";
+import ThreatmentsSection from "../components/ThreatmentsSection";
+
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -25,6 +26,53 @@ export const IndexPageTemplate = ({
   return (
     <div>
       <HeaderCoverSection/>
+      <TheMethodSection />
+      <ThreatmentsSection />
+      <BlogSection>
+        <BlogRoll />
+      </BlogSection>
+      <ContactSection />
+      {/*
+            
+      <FullWidthImage img={heroImage} title={title} subheading={subheading} />*/}
+      
+     
+     {/*<section className="section section--gradient">
+        <div className="container">
+          <div className="section">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <div className="content">
+                  <div className="content">
+                    <div className="tile">
+                      <h1 className="title">{mainpitch.title}</h1>
+                    </div>
+                    <div className="tile">
+                      <h3 className="subtitle">{mainpitch.description}</h3>
+                    </div>
+                  </div>
+                  <div className="columns">
+                    <div className="column is-12">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        {heading}
+                      </h3>
+                      <p>{description}</p>
+                    </div>
+                  </div>
+                  <Features gridItems={intro.blurbs} />
+                  <div className="columns">
+                    <div className="column is-12 has-text-centered">
+                      <Link className="btn" to="/products">
+                        See all products
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>*/}
     </div>
   );
 };
