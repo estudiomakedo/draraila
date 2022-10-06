@@ -36,7 +36,11 @@ export default class SchedulePortal extends React.Component {
     firstPart = `Oi, eu me chamo ${name}.`;
     }
     if(!!email && !!choice){
-    secondPart = ` Gostaria muito de agendar uma consulta para a localidade ${choice}. Meu melhor método de contato é o ${email}. `;
+        if(choice == 'online')
+        secondPart = ` Gostaria muito de agendar uma consulta ${choice}. Meu melhor método de contato é o ${email}. `;
+        else
+        secondPart = ` Gostaria muito de agendar uma consulta para a localidade ${choice}. Meu melhor método de contato é o ${email}. `;
+
     } else if (!!email){
     secondPart = ` Gostaria muito de agendar uma consulta. Meu melhor método de contato é o ${email}. `;
 
@@ -44,7 +48,7 @@ export default class SchedulePortal extends React.Component {
     if(!!text)
     thirdPart = text;
     this.setState({name: '', email: '', text: '', choice:''});
-    window.open(`https://wa.me/5511939277280?text=${encodeURIComponent(firstPart)}%0A%0A${encodeURIComponent(secondPart)}%0A%0A${encodeURIComponent(thirdPart)}`)
+    window.open(`https://wa.me/5514998757024?text=${encodeURIComponent(firstPart)}%0A%0A${encodeURIComponent(secondPart)}%0A%0A${encodeURIComponent(thirdPart)}`)
   }
 
     render() {
@@ -106,6 +110,13 @@ export default class SchedulePortal extends React.Component {
                       value="Bauru" 
                       onChange={event => this.setState({choice: event.target.value})}   />
                     <label for="bau">Bauru</label>
+                  </div>
+
+                  <div>
+                    <input type="radio" id="online" name="choice"               
+                      value="online" 
+                      onChange={event => this.setState({choice: event.target.value})}   />
+                    <label for="online">Online</label>
                   </div>
                   
                 </ChooseLocationContainer>

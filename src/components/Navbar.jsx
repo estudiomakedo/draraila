@@ -213,7 +213,7 @@ const Navbar = class extends React.Component {
         <NavSM>
           <StyledList>
             <StyledListItem>
-              <NavItem to="/">
+              <NavItem to="/threatments">
                 Tratamentos
               </NavItem>
             </StyledListItem>
@@ -240,7 +240,7 @@ const Navbar = class extends React.Component {
         data-target="navMenu"
         role="menuitem"
         tabIndex={0}>
-        <NavItem to="/">
+        <NavItem to="/threatments">
           Tratamentos
         </NavItem>
         <NavItem to="/blog">

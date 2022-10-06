@@ -95,9 +95,9 @@ const GroupImg = styled.a`
 `;
 
 const contacts = [
-  {city: 'São Paulo, Baurú e Piracicaba (SP)', phone: '(99) 9999-9999', mail: 'example@draraila.com.br'},
-  {city: 'Sinop (MT)', phone: '(99) 9999-9999', mail: 'example@draraila.com.br'},
-  {city: 'Fortaleza (CE)', phone: '(99) 9999-9999', mail: 'example@draraila.com.br'},
+  {city: 'São Paulo, Baurú e Piracicaba (SP)', phone: '', mail: 'example@draraila.com.br'},
+  {city: 'Sinop (MT)', phone: 'Av. DAS EMBAÚBAS, 1276, ANDAR 01 SALA 02, CEP 78550-206, Sinop (MT) - Brasil.', mail: 'example@draraila.com.br'},
+  {city: 'Fortaleza (CE)', phone: '', mail: 'example@draraila.com.br'},
 ];
 
 const ContactSection = ({ children, title, date }) => {
@@ -122,7 +122,7 @@ const ContactSection = ({ children, title, date }) => {
               <City>{contact.city}</City>
               <Group>
                 <GroupInfo>{contact.phone}</GroupInfo>
-                <GroupInfo>{contact.mail}</GroupInfo>
+                {/*<GroupInfo>{contact.mail}</GroupInfo>*/}
               </Group>
             </ContactInfo>
           ))}
@@ -130,9 +130,9 @@ const ContactSection = ({ children, title, date }) => {
         <ContactCard flex={3}>
           <Title>Raila nas Redes</Title>
           <Group>
-            <GroupImg href={"https://google.com.br"}><img src={instagram} /></GroupImg>
-            <GroupImg href={"https://google.com.br"}><img src={youtube} /></GroupImg>
-            <GroupImg href={"https://google.com.br"}><img src={facebook} /></GroupImg>
+            <GroupImg href={"https://www.instagram.com/drarailateixeira/"}><img src={instagram} target="_blank" /></GroupImg>
+            <GroupImg href={"https://www.youtube.com/channel/UCqpLklrmp8tgoyty_4PWBNQ"} target="_blank"><img src={youtube} /></GroupImg>
+            <GroupImg href={"https://www.facebook.com/dra.raila/"}><img src={facebook} target="_blank" /></GroupImg>
           </Group>
         </ContactCard>
 

@@ -3,14 +3,13 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import GoogleFontLoader from './modified/GoogleFontLoader';
 import texture from "../../static/siteimg/texture.png";
+import { Link } from "gatsby";
 
 import logo from '../../static/siteimg/logo.png';
 import threatments1 from '../../static/raila/tratamentos1tratada.png';
 import threatments2 from '../../static/raila/tratamentos2tratada.png';
 import Theme from '../../config/theme';
 
-import RoundButton from './RoundButton';
-import NoBgButton from './shared/NoBgButton';
 
 
 
@@ -160,11 +159,12 @@ const Button = styled.div`
   cursor: pointer;
   border: 2px solid #333;
   text-align: center;
+`;
 
-  & p {
-    font-family: Poppins;
-    font-size: 14px;
-  }
+const LinkP = styled(Link)`
+  font-family: Poppins;
+  font-size: 14px;
+  color: black;
 `;
 
 const ThreatmentsSection = ({ children, title, date }) => {
@@ -190,7 +190,7 @@ const ThreatmentsSection = ({ children, title, date }) => {
                     A Terapia de Reposição Hormonal via implantes subcutâneos tem se configurado como um dos mais eficazes tratamentos de distúrbios hormonais, tanto para homens como para mulheres.
                   </Description>
                   <Button>
-                    <p>Conheça</p>
+                    <LinkP to="/threatments#implante">Conheça</LinkP>
                   </Button>
                 </RelativeAdjustment>
               </Card>
@@ -202,7 +202,7 @@ const ThreatmentsSection = ({ children, title, date }) => {
                   Em muitos casos, sintomas relatados por pacientes ocorrem a partir de deficiências nutricionaiss. Nesses casos, após a realização de exames laboratoriais detalhados, as terapias injetáveis são indicadas.
                   </Description>
                   <Button>
-                    <p>Conheça</p>
+                    <LinkP to="/threatments#injetavel">Conheça</LinkP>
                   </Button>
                 </RelativeAdjustment>
               </Card>
@@ -214,7 +214,7 @@ const ThreatmentsSection = ({ children, title, date }) => {
                   O tripé básico para emagrecer com saúde e sem efeito-sanfona envolve alimentação, exercícios e conduta farmacológica. E aí que entram os protocolos avançados para emagrecimento.
                   </Description>
                   <Button>
-                    <p>Conheça</p>
+                    <LinkP to="/threatments#emagrecer">Conheça</LinkP>
                   </Button>
                 </RelativeAdjustment>
               </Card>
@@ -236,7 +236,7 @@ const ThreatmentsSection = ({ children, title, date }) => {
                   Doença não se trata. Evita-se! Se você também pensa assim e busca atendimento de qualidade em Medicina Preventiva, está no lugar certo!
                   </Description>
                   <Button>
-                    <p>Conheça</p>
+                    <LinkP to="/threatments#preventiva">Conheça</LinkP>
                   </Button>
                 </RelativeAdjustment>
               </Card>
@@ -248,7 +248,7 @@ const ThreatmentsSection = ({ children, title, date }) => {
                   A cirurgia bariátrica não é um fim, mas um meio, através do qual você interrompe o processo de agravamento da obesidade. Acompanhamento pós-cirurgia bariátrica é esesencial.
                   </Description>
                   <Button>
-                    <p>Conheça</p>
+                    <LinkP to="/threatments#bariatrica">Conheça</LinkP>
                   </Button>
                 </RelativeAdjustment>
               </Card>
@@ -260,7 +260,7 @@ const ThreatmentsSection = ({ children, title, date }) => {
                   Na atenção à saúde da mulher, a Dra. Raila Teixeira realiza o acompanhamento desde as desordens metabólicas e hormonais que surgem a partir do início da idade reprodutiva.
                   </Description>
                   <Button>
-                    <p>Conheça</p>
+                    <LinkP to="/threatments#saude">Conheça</LinkP>
                   </Button>
                 </RelativeAdjustment>
               </Card>

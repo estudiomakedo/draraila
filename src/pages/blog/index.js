@@ -10,7 +10,7 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <InternalHeader title="Últimas Postagens" />
-        <section className="section" style={{backgroundColor: Theme.colors.secondary.light}}>
+        <section className="section" style={{backgroundColor: Theme.colors.secondary.light, paddingTop: 100}}>
           <div className="container">
             <div className="content">
               <BlogRoll />
