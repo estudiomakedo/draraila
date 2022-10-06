@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import logo from "../../static/siteimg/logo.png";
 import logoNome from "../../static/siteimg/pngnome.png";
 import Theme from '../../config/theme';
-import blackbg from '../../static/img/blackbg.jpg';
 
 const Footer = class extends React.Component {
 
