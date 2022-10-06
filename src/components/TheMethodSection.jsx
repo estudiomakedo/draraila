@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import GoogleFontLoader from '../components/modified/GoogleFontLoader';
 import NoBgButton from '../components/shared/NoBgButton';
-import { Link } from 'gatsby';
+import youtube from "../../static/siteimg/youtube.jpeg";
 
 import Theme from '../../config/theme';
 
@@ -83,9 +83,13 @@ const TheMethodSection = ({ children, title, date }) => {
         </Text>
       </div> 
       <FrameContainer>
-        <iframe style={{margin: "0 auto"}} width="100%" height="315" 
+        <a href="https://www.youtube.com/watch?v=lpYbMUdMZw4" target="_blank">
+          <img src={youtube} style={{width: 450}} />
+        </a>
+
+        {/*<iframe style={{margin: "0 auto"}} width="100%" height="315" 
                 src="https://www.youtube.com/watch?v=lpYbMUdMZw4" title="YouTube video player" frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>*/}
         <LinkStyled href="https://www.youtube.com/channel/UCqpLklrmp8tgoyty_4PWBNQ" target="_blank">
           <NoBgButton color={Theme.colors.primary.base} maxWidth={'340px'}>
             <p>Siga a Dra Raila no Youtube</p>
