@@ -26,7 +26,7 @@ const Footer = class extends React.Component {
         </LogoBar>
 
         <Copyright>
-           Copyright {this.getYear()} - Ed Mágica & StudioMakedo
+           Copyright {this.getYear()} - Editora Mágica & StudioMakedo
         </Copyright>
 
       </Footers>

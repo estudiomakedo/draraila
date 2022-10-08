@@ -79,7 +79,7 @@ const TheMethodSection = ({ children, title, date }) => {
 
         
         <Text>
-          Nas redes sociais e no seu canal no YouTube, a Dra. Raila está sempre divulgando informações a respeito de tratamentos para a obesidade e/ou sobrepeso, bem como é uma importante voz na divulgação científica médica, realizando comentários sobre artigos e estudos em andamento sobre implantes hormonais, emagrecimento, hipertrofia, performance física, libido, obesidade e qualidade de vida. Atualmente, a Dra. Raila Teixeira cumpre agenda de atendimentos nas cidades de São Paulo (SP), Bauru (SP), Sinop (MT), Piracicaba (SP) e Fortaleza (CE), como também realiza consultas via telemedicina.
+          Nas redes sociais e no seu canal no YouTube, a Dra. Raila está sempre divulgando informações a respeito de tratamentos para a obesidade e/ou sobrepeso, bem como é uma importante voz na divulgação científica médica, realizando comentários sobre artigos e estudos em andamento sobre implantes hormonais, emagrecimento, hipertrofia, performance física, libido, obesidade e qualidade de vida. Atualmente, a Dra. Raila Teixeira cumpre agenda de atendimentos nas cidades de São Paulo (SP), Bauru (SP), Sinop (MT), e Fortaleza (CE), como também realiza consultas via telemedicina.
         </Text>
       </div> 
       <FrameContainer>

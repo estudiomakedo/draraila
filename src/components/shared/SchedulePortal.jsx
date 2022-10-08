@@ -125,7 +125,7 @@ export default class SchedulePortal extends React.Component {
                   <SubmitButton onClick={() => this.generateWhatsappMessage(this.state.name, this.state.email, this.state.text, this.state.choice)}>
                       <SubmitButtonText>Enviar <Icon src={whatsapp} /></SubmitButtonText>
                   </SubmitButton>
-                  <AltSpan>Ao clicar em enviar, você será redirecionado ao WhatsApp da Dra Raila</AltSpan>
+                  <AltSpan>Ao clicar em enviar, você será redirecionado ao WhatsApp da Dra. Raila</AltSpan>
                 </SubmitContainer>
               </div>
 

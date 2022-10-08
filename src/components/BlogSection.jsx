@@ -54,7 +54,7 @@ const BlogSection = ({ children }) => {
           ]}
         />
       <Wrapper className="column is-12">
-        <GenericSectionTitle text="Acompanhe os nossos últimos posts" />
+        <GenericSectionTitle text="BLOG DA DRA. RAILA: Artigos e novidades sobre o universo da saúde." />
         {children}
         <div className="column is-12 has-text-centered">
           <SectionAction to="/blog">

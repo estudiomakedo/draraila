@@ -226,7 +226,7 @@ const HeaderCoverSection = ({ children, title, date }) => {
         />
 
     <Text>
-      <PositiveMessage>ENCONTRE NA <b>SAÚDE</b> A SUA <b>MELHOR VERSÃO</b></PositiveMessage>
+      <PositiveMessage>NÚCLEO DE <b>SAÚDE</b> E <b>PERFORMANCE</b> <br/> DRA. RAILA TEIXEIRA</PositiveMessage>
       <DisplayNone>
         <Subtitle>
           Tenha acesso a tratamentos de primeira linha em Terapia de Reposição Hormonal, Suplementação Injetável e Protocolos Avançados de Emagrecimento
@@ -234,13 +234,13 @@ const HeaderCoverSection = ({ children, title, date }) => {
       </DisplayNone>
       <Link to="/#" onClick={openScheduleModal()}>
         <NoBgButton>
-          <p>Site em Construção</p>
+          <p>Agende uma Consulta</p>
         </NoBgButton>
       </Link>
 
       <DisplayNone>
         <Subtitle>
-          São Paulo - Bauru - Piracicaba (SP)<br/> Sinop (MT)<br/> Fortaleza (CE)
+          São Paulo - Bauru (SP)<br/> Sinop (MT)<br/> Fortaleza (CE)
         </Subtitle>
       </DisplayNone>
     </Text>

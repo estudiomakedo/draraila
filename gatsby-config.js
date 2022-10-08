@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Dra Raila Teixeira",
     description:
-      "Website da Dra Raila Teixeira",
+      "Website da Dra. Raila Teixeira",
     url: 'https://drarailateixeira.com.br', // Domain of your site. No trailing slash!
     siteUrl: 'https://drarailateixeira.com.br/', // url + pathPrefix
     siteLanguage: 'pt', // Language Tag on <html> element

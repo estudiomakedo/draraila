@@ -9,6 +9,8 @@ import texture from "../../static/siteimg/texture.png";
 import instagram from "../../static/siteimg/instagram.png";
 import youtube from "../../static/siteimg/youtube.png";
 import facebook from "../../static/siteimg/facebook.png";
+import whatsapp from '../../static/whatsapp.png';
+import { Link } from 'gatsby'
 
 
 const Box = styled.div`
@@ -94,8 +96,31 @@ const GroupImg = styled.a`
   }
 `;
 
+
+const WhatsappButton = styled(Link)`
+  font-size: 18px;
+  background-color: ${Theme.colors.primary.base};
+  padding: 0.4rem;
+  text-align: center;
+  margin: 0;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 200px;
+  border-radius: 15px;
+`;
+
+const Icon = styled.img`
+  margin: 0 10px 0 0;
+  max-width: 15px;
+`;
+
+
 const contacts = [
-  {city: 'São Paulo, Baurú e Piracicaba (SP)', phone: '', mail: 'example@draraila.com.br'},
+  {city: 'São Paulo, Baurú (SP)', phone: 'NÚCLEO DE SAÚDE E PERFORMANCE DRA. RAILA TEIXEIRA AV. Getúlio Vargas 22-25, edifício PRIME SQUARE, jardim Europa', mail: 'example@draraila.com.br'},
   {city: 'Sinop (MT)', phone: 'Av. DAS EMBAÚBAS, 1276, ANDAR 01 SALA 02, CEP 78550-206, Sinop (MT) - Brasil.', mail: 'example@draraila.com.br'},
   {city: 'Fortaleza (CE)', phone: '', mail: 'example@draraila.com.br'},
 ];
@@ -116,16 +141,13 @@ const ContactSection = ({ children, title, date }) => {
       <GenericSectionTitle text="Dúvidas? Fale comigo!" styles={{color: Theme.colors.black.base, paddingLeft: 30}} />
       <Row>
         <ContactCard flex={7}>
-          <Title>Book de Contatos</Title>
-          {contacts.map((contact, index) => (
-            <ContactInfo key={index}>
-              <City>{contact.city}</City>
-              <Group>
-                <GroupInfo>{contact.phone}</GroupInfo>
-                {/*<GroupInfo>{contact.mail}</GroupInfo>*/}
-              </Group>
-            </ContactInfo>
-          ))}
+          <Title>Contato</Title>
+          <ContactInfo>
+            {contacts.map((contact, index) => (
+                <City key={index}>{contact.city}</City>
+            ))}
+          </ContactInfo>
+          <WhatsappButton to="https://wa.me/5514998757024?" target={"_blank"}><Icon src={whatsapp} /> (14)99875-7024</WhatsappButton>
         </ContactCard>
         <ContactCard flex={3}>
           <Title>Raila nas Redes</Title>

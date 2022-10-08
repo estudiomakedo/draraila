@@ -11,7 +11,6 @@ import ContactSection from "../components/ContactSection";
 import BlogSection from "../components/BlogSection";
 import ThreatmentsSection from "../components/ThreatmentsSection";
 
-
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,

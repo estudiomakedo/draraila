@@ -34,7 +34,7 @@ export default class NoBgButton extends React.Component {
 const Container = styled.div`
 padding: 20px 15px;
 box-shadow: 0px 3px 6px #00000029;
-max-width: ${props => props.maxWidth? props.maxWidth: '240px'};
+max-width: ${props => props.maxWidth? props.maxWidth: '280px'};
 border: 2px solid ${props => props.color? props.color :'#333'};
 
 @media screen and (max-width:  ${Theme.breakpoints.s}){

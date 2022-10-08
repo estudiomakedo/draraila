@@ -26,3 +26,5 @@ Nota-se, portanto, que a busca da biodisponibilidade está ligada à escolha da 
 Por exemplo, pacientes pós-cirurgia bariátrica, por conta do comprometimento da capacidade de absorção de nutrientes pelo sistema digestivo e limitações impostas pelo próprio procedimento, devem ser submetidos às terapias injetáveis como forma de suprir a biodisponibilidade vitamínica e nutricional, até que se estabeleça a sua plena recuperação. O mesmo ocorre em casos de disbiose, quando a população microbiota está em desequilibrada, impedindo a absorção de nutrientes via oral, comprometendo a saúde do paciente.
 
 Vale frisar que assim a suplementação via oral sem acompanhamento médico é perigosa para a saúde (e para as suas finanças também), a suplementação injetável deve ser realizada com o seu médico, sendo a sua indicação condicionada à análise de exames clínicos e laboratoriais. Entre em contato pelos canais de atendimento e saiba como eu posso te ajudar!
+
+#### Texto: Dra. Raila Teixeira
